@@ -11,7 +11,7 @@ def find_names(line):
 
     return result
 
-f = open("venv/names.txt")
+f = open("names.txt")
 count = 0
 for line in f.readlines():
     #print(line)
