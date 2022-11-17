@@ -1,3 +1,5 @@
+#A Better Algorithm for Plane Seating
+#Steve Sabaugh
 """This program simulates the sales of tickets for a specific flight.
 
 A plane is represented by a list. Each element of the list is a row in
