@@ -42,9 +42,11 @@ Now we want to find all zips($4) that have an unbanked 2013 rate($7) of over 10%
 Then create a list of unbanked zips, removing the first 7 records (those are the header, NYC total, and 5 borough's totals NR > 7)
 
     awk 'BEGIN {FS = ","} $7 > 0.1 && NR > 7 {print $4 > "feeZips.txt"}' zipData.csv
+ [see txt file](./feeZips.txt)
+ 
 Last, check our file and pipe it through sort to quickly see if my neighborhood (11222) was excluded
 
     cat feeZips.txt |sort
  [see output](output_files/output05.md)
 
-Now zipData.csv will be used in our Java Bank program to digitally redline customers by charging them a fee for their account.
+Now feeZips.txt will be used in our Java Bank program to digitally redline customers by charging them a fee for their account.
