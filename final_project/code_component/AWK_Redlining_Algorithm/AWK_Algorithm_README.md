@@ -1,4 +1,4 @@
-# AWK Algolrithm
+# AWK Algorithm
 ### How we instituted our redlining algorithm in our Java Bank Program using data maniupulation in AWK.
 
 To run these commands on a Mac or Linux/UNIX system follow these istructions:
