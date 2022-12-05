@@ -2,11 +2,12 @@
 ### How we instituted our redlining algorithm in our Java Bank Program using data maniupulation in AWK.
 
 To run these commands on a Mac or Linux/UNIX system follow these istructions:
-1.make a folder in your root called 'awk' and place the file '[zipData.csv](./)' inside of it.
-2.open up Terminal program. At the % or $ prompt type...
 
-    cd ~
-    cd awk
+1. Make a folder in your root called 'awk' and place the file '[zipData.csv](./)' inside of it.
+1. Open up Terminal program. At the % or $ prompt type...
+
+        cd ~
+        cd awk
 If you can't run the commands yourself, output links will be provided here in this document.
 
 Print the raw contents of the data file
@@ -31,6 +32,7 @@ Now I save the legend as a separate file for later recall using '>'
 Run cat command to see our table
 
     cat zipDataTable.txt
+[see txt file](./zipDataTable.txt)
     
 Now we want to find all zips($4) that have an unbanked 2013 rate($7) of over 10% and print the neighborhood name as a neat table using printf. That will be our criteria for charging a fee in our bank program.
 
