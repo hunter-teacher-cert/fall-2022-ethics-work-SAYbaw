@@ -2,7 +2,7 @@
 ### How we instituted our redlining algorithm in our Java Bank Program using data maniupulation in AWK.
 
 To run these commands on a Mac or Linux/UNIX system follow these istructions:
-1.make a folder in your root called 'awk' and place the file '[zipData.csv](zipData.csv)' inside of it.
+1.make a folder in your root called 'awk' and place the file '[zipData.csv](AWK_Redlining_Algorithm/)' inside of it.
 2.open up Terminal program. At the % or $ prompt type...
 
     cd ~
