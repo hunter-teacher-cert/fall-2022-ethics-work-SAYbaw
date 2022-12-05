@@ -12,6 +12,7 @@ If you can't run the commands yourself, output links will be provided here in th
 Print the raw contents of the data file
 
     awk '{print $0}' zipData.csv
+[see output](/output_files/output01.md)
 
 Determine the number of fields per record line
 
@@ -32,9 +33,12 @@ Run cat command to see our table
 Now we want to find all zips($4) that have an unbanked 2013 rate($7) of over 10% and print the neighborhood name as a neat table using printf. That will be our criteria for charging a fee in our bank program.
 
     awk 'BEGIN {FS = ","} $7 > 0.1 {printf("%-40s%6d %4f\n",$1, $4, $7)}' zipData.csv
-#create a list of unbanked zips, removing the first 7 records (those are the header, NYC total, and 5 borough's totals NR > 7)
-awk 'BEGIN {FS = ","} $7 > 0.1 && NR > 7 {print $4 > "feeZips.txt"}' zipData.csv
-#check our file and pipe it through sort to quickly see if my neighborhood was excluded
-cat feeZips.txt |sort 
 
-#zipData.csv will be used in my Java Bank program to digitally redline customers by charging them a fee for their account
+Then create a list of unbanked zips, removing the first 7 records (those are the header, NYC total, and 5 borough's totals NR > 7)
+
+    awk 'BEGIN {FS = ","} $7 > 0.1 && NR > 7 {print $4 > "feeZips.txt"}' zipData.csv
+Last, check our file and pipe it through sort to quickly see if my neighborhood (11222) was excluded
+
+    cat feeZips.txt |sort 
+
+Now zipData.csv will be used in our Java Bank program to digitally redline customers by charging them a fee for their account.
