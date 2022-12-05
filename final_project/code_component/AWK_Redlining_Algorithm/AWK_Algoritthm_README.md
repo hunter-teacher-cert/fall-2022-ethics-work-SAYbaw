@@ -12,7 +12,7 @@ If you can't run the commands yourself, output links will be provided here in th
 Print the raw contents of the data file
 
     awk '{print $0}' zipData.csv
-[see output](/output_files/output01.md)
+[see output](output_files/output01.md)
 
 Determine the number of fields per record line
 
